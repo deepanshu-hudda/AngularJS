@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script>
+    angular.module('myApp',[])
+    .controller('myController',myController)
+    .controller('myController1',myController1)
+    function myController()
+    { 
+        var vm=this;
+        vm.name='Chhavi'
+    }
+    function myController1(){
+        var vm=this;
+        vm.name='Hudda'
+    }
+        </script>
+        </head>
+        <body>
+            <div ng-controller='myController as myCtrl'>
+            <div ng-controller='myController1 as myCtrl1'>
+                    {{myCtrl.name}}
+                    {{myCtrl1.name}}
+            </div>
+        </div>
+
+            </body>
+</html>
